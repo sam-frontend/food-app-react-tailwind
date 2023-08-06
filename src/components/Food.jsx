@@ -22,18 +22,26 @@ const Food = () => {
       })
     );
   };
+//filter b id
+ const filterId = (id) => {
+    setFoods(
+      data.filter((item) => {
+        return item.id === id;
+      })
+    );
+  };
 
   return (
     <div className='max-w-[1640px] m-auto px-4 py-12'>
       <h1 className='text-orange-600 font-bold text-4xl text-center'>
-        Top Rated Menu Items
+        Top Naija Dishes
       </h1>
 
       {/* Filter Row */}
       <div className='flex flex-col lg:flex-row justify-between'>
         {/* Fliter Type */}
         <div>
-          <p className='font-bold text-gray-700'>Filter Type</p>
+          <p className='font-bold text-gray-700'>Filter By Type</p>
           <div className='flex justfiy-between flex-wrap'>
             <button
               onClick={() => setFoods(data)}
@@ -42,10 +50,10 @@ const Food = () => {
               All
             </button>
             <button
-              onClick={() => filterType('burger')}
+              onClick={() => filterType('Rice')}
               className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
             >
-              Burgers
+              Rice
             </button>
             <button
               onClick={() => filterType('pizza')}
@@ -54,10 +62,10 @@ const Food = () => {
               Pizza
             </button>
             <button
-              onClick={() => filterType('salad')}
+              onClick={() => filterType('Swallow')}
               className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
             >
-              Salads
+              Swallow
             </button>
             <button
               onClick={() => filterType('chicken')}
@@ -67,34 +75,148 @@ const Food = () => {
             </button>
           </div>
         </div>
-
+        <div>
+          <p className='font-bold text-gray-700'>Filter By Id</p>
+          <div className='flex justfiy-between flex-wrap'>
+          <button
+                      onClick={() => filterId('01')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    01
+                    </button>
+                  <button
+                      onClick={() => filterId('02')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    02
+                    </button>
+                    <button
+                      onClick={() => filterId('03')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                      03
+                    </button>
+                    <button
+                      onClick={() => filterId('04')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                      04
+                    </button>
+                    <button
+                      onClick={() => filterPrice('050')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                      050
+                    </button>
+                    <button
+                      onClick={() => filterId('06')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                      06
+                    </button>
+                    <button
+                      onClick={() => filterId('07')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    07
+                    </button>
+                    <button
+                      onClick={() => filterId('08')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    08
+                    </button>
+                    <button
+                      onClick={() => filterId('09')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    09
+                    </button>
+                    <button
+                      onClick={() => filterId('10')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    10
+                    </button>
+                    <button
+                      onClick={() => filterId('11')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    11
+                    </button>
+                    <button
+                      onClick={() => filterPrice('#12')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    12
+                    </button>
+                    <button
+                      onClick={() => filterId('13')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    13
+                    </button>
+                    <button
+                      onClick={() => filterId('14')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    14
+                    </button>
+                    <button
+                      onClick={() => filterId('15')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    15
+                    </button>
+                    <button
+                      onClick={() => filterId('16')}
+                      className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                    >
+                    16
+                    </button>
+              
+            </div>
+            </div>
+                
         {/* Filter Price */}
         <div>
-          <p className='font-bold text-gray-700'>Filter Price</p>
+          <p className='font-bold text-gray-700'>Filter By Price</p>
           <div className='flex justify-between max-w-[390px] w-full'>
             <button
-              onClick={() => filterPrice('$')}
+              onClick={() => filterPrice('#3000')}
               className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
             >
-              $
+              #3000
             </button>
             <button
-              onClick={() => filterPrice('$$')}
+              onClick={() => filterPrice('#4500')}
               className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
             >
-              $$
+              #4500
             </button>
             <button
-              onClick={() => filterPrice('$$$')}
+              onClick={() => filterPrice('#4000')}
               className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
             >
-              $$$
+              #4000
             </button>
             <button
-              onClick={() => filterPrice('$$$$')}
+              onClick={() => filterPrice('#5000')}
               className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
             >
-              $$$$
+              #5000
+            </button>
+            <button
+              onClick={() => filterPrice('#6000')}
+              className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+            >
+              #6000
+            </button>
+            <button
+              onClick={() => filterPrice('#2500')}
+              className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+            >
+              #2500
             </button>
           </div>
         </div>

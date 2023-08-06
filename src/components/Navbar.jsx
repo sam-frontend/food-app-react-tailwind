@@ -1,13 +1,19 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag } from 'react-icons/ai';
 import { BsFillCartFill,BsFillSaveFill } from 'react-icons/bs';
 import {TbTruckDelivery} from 'react-icons/tb'
 import {FaUserFriends, FaWallet} from 'react-icons/fa'
 import {MdFavorite, MdHelp} from 'react-icons/md'
+import {data} from '../data/data.js';
 
 const Navbar = () => {
 const [nav, setNav] = useState(false)
-
+const [searchTerm, setSearchTerm] = useState("SAM Foods");
+  
+  const handleChange = e => {
+    setSearchTerm(e.target.value);
+  };
+  
   return (
     <div className='max-w-[1640px] mx-auto flex justify-between items-center p-4'>
       {/* Left side */}
@@ -16,7 +22,7 @@ const [nav, setNav] = useState(false)
           <AiOutlineMenu size={30} />
         </div>
         <h1 className='text-2xl sm:text-3xl lg:text-4xl px-2'>
-          Best <span className='font-bold'>Eats</span>
+          SAM <span className='font-bold'>FOODS</span>
         </h1>
         <div className='hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]'>
           <p className='bg-black text-white rounded-full p-2'>Delivery</p>
@@ -30,8 +36,11 @@ const [nav, setNav] = useState(false)
         <input
           className='bg-transparent p-2 w-full focus:outline-none'
           type='text'
-          placeholder='Search foods'
+          placeholder='Search Menu'
+          value={searchTerm}
+         onChange={handleChange}
         />
+    
       </div>
       {/* Cart button */}
       <button className='bg-black text-white hidden md:flex items-center py-2 rounded-full'>
@@ -51,17 +60,17 @@ const [nav, setNav] = useState(false)
           className='absolute right-4 top-4 cursor-pointer'
         />
         <h2 className='text-2xl p-4'>
-          Best <span className='font-bold'>Eats</span>
+          SAM <span className='font-bold'>FOODS</span>
         </h2>
         <nav>
             <ul className='flex flex-col p-4 text-gray-800'>
                 <li className='text-xl py-4 flex'><TbTruckDelivery size={25} className='mr-4' /> Orders</li>
-                <li className='text-xl py-4 flex'><MdFavorite size={25} className='mr-4' /> Favorites</li>
+                <li className='text-xl py-4 flex'><MdFavorite size={25} className='mr-4' />Menu</li>
                 <li className='text-xl py-4 flex'><FaWallet size={25} className='mr-4' /> Wallet</li>
                 <li className='text-xl py-4 flex'><MdHelp size={25} className='mr-4' /> Help</li>
                 <li className='text-xl py-4 flex'><AiFillTag size={25} className='mr-4' /> Promotions</li>
-                <li className='text-xl py-4 flex'><BsFillSaveFill size={25} className='mr-4' /> Best Ones</li>
-                <li className='text-xl py-4 flex'><FaUserFriends size={25} className='mr-4' /> Invite Friends</li>
+                <li className='text-xl py-4 flex'><BsFillSaveFill size={25} className='mr-4' /> Best Deals</li>
+                <li className='text-xl py-4 flex'><FaUserFriends size={25} className='mr-4' />Contact Us</li>
             </ul>
         </nav>
       </div>
