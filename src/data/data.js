@@ -149,14 +149,28 @@ export const data = [
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGd7Cv6tqlMpDyVpx_HyLK6lLjOenGW-lAWA&usqp=CAU',
       price: '#4000',
     },
-  ];
-  
+    {
+      id: '17',
+      name: 'Yam peppesoup',
+      category: 'Swallow',
+      image:
+        'https://res.cloudinary.com/ugonna/image/upload/v1691869868/Sam%20Food%20App/pizza_sstdp6.jpg',
+      price: '#4000',
+    },
+  {
+    id: '18',
+    name: 'Pizza',
+    category: 'Pizza',
+    image:
+      'https://res.cloudinary.com/ugonna/image/upload/v1691869868/Sam%20Food%20App/pizza_sstdp6.jpg',
+    price: '#4000',
+  },
+];
   export const categories = [
     {
       id: 1,
-      name: 'Fast Food',
-      image:
-        'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/FastFood_BrowseHome@3x.png',
+      name: 'Fast food',
+      image:'https://res.cloudinary.com/ugonna/image/upload/v1691869868/Sam%20Food%20App/pizza_sstdp6.jpg',
     },
     {
       id: 2,
